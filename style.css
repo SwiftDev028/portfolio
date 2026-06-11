@@ -1030,6 +1030,59 @@ button {
   letter-spacing: -0.075em;
 }
 
+.velvet-table-visual {
+  min-height: 540px;
+  background: #0b0b0a;
+}
+
+.velvet-table-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(11, 11, 10, 0.18), rgba(11, 11, 10, 0.88));
+}
+
+.velvet-table-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.74) saturate(0.8);
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .velvet-table-visual > img {
+  transform: scale(1.025);
+}
+
+.velvet-table-brand {
+  position: absolute;
+  z-index: 2;
+  right: 34px;
+  bottom: 34px;
+  left: 34px;
+  display: grid;
+  color: #f5f0e8;
+}
+
+.velvet-table-brand small,
+.velvet-table-brand span {
+  color: #c9a86a;
+  font-size: 8px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.velvet-table-brand strong {
+  margin: 12px 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(54px, 6vw, 86px);
+  font-weight: 400;
+  line-height: 0.78;
+  letter-spacing: -0.055em;
+}
+
 .case-counter {
   position: absolute;
   top: 22px;
