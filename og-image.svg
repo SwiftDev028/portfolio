@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="glow" cx="85%" cy="10%" r="75%">
+      <stop offset="0" stop-color="#ff9f0a" stop-opacity=".35"/>
+      <stop offset="1" stop-color="#ff9f0a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="630" rx="32" fill="#f7f7f5"/>
+  <rect width="1200" height="630" rx="32" fill="url(#glow)"/>
+  <rect x="72" y="68" width="62" height="62" rx="18" fill="#111111"/>
+  <text x="103" y="108" text-anchor="middle" fill="#ff9f0a" font-family="Arial, sans-serif" font-size="20" font-weight="700">AK</text>
+  <text x="154" y="91" fill="#111111" font-family="Arial, sans-serif" font-size="21" font-weight="700">Almir Khialov</text>
+  <text x="154" y="117" fill="#666666" font-family="Arial, sans-serif" font-size="13" letter-spacing="2">DIGITAL BUILDER</text>
+  <text x="72" y="275" fill="#111111" font-family="Arial, sans-serif" font-size="69" font-weight="700" letter-spacing="-3">Сайты, Telegram-боты</text>
+  <text x="72" y="355" fill="#ff9f0a" font-family="Arial, sans-serif" font-size="69" font-weight="700" letter-spacing="-3">и AI-автоматизации</text>
+  <text x="72" y="435" fill="#111111" font-family="Arial, sans-serif" font-size="69" font-weight="700" letter-spacing="-3">для бизнеса</text>
+  <text x="74" y="518" fill="#666666" font-family="Arial, sans-serif" font-size="22">Digital products for business growth.</text>
+  <circle cx="1070" cy="515" r="52" fill="#111111"/>
+  <text x="1070" y="526" text-anchor="middle" fill="#ff9f0a" font-family="Arial, sans-serif" font-size="34">↗</text>
+</svg>
