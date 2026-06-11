@@ -1083,6 +1083,63 @@ button {
   letter-spacing: -0.055em;
 }
 
+.mini-garage-visual {
+  min-height: 540px;
+  background: #0b0c0f;
+}
+
+.mini-garage-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(5, 6, 8, 0.92), rgba(5, 6, 8, 0.04) 80%);
+}
+
+.mini-garage-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .mini-garage-visual > img {
+  transform: scale(1.025);
+}
+
+.mini-garage-brand {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 34px;
+  display: grid;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.mini-garage-brand small,
+.mini-garage-brand span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.mini-garage-brand strong {
+  margin: 14px 0;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(48px, 5.5vw, 78px);
+  line-height: 0.86;
+  letter-spacing: -0.065em;
+}
+
+.mini-garage-brand em {
+  color: #f4b400;
+  font-style: normal;
+}
+
 .case-counter {
   position: absolute;
   top: 22px;
