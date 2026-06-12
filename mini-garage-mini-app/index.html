@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0b0c0f">
+  <meta name="description" content="MINI Garage Telegram Mini App for service booking, maintenance estimates, MINI models and original parts.">
+  <title>MINI Garage Mini App</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <button class="icon-button back-trigger" type="button" aria-label="Go back" hidden>←</button>
+      <button class="brand" type="button" data-screen="home" aria-label="MINI Garage home">
+        <span class="brand-mark">MG</span>
+        <span><strong>MINI GARAGE</strong><small>Service Mini App</small></span>
+      </button>
+      <div class="status"><i></i> OPEN</div>
+    </header>
+
+    <main id="app-main">
+      <section class="screen active" data-view="home">
+        <article class="hero-card">
+          <img src="assets/images/hero-jcw.jpg" alt="MINI John Cooper Works at MINI Garage">
+          <div class="hero-overlay"></div>
+          <div class="hero-content">
+            <span class="eyebrow">PREMIUM MINI CARE</span>
+            <h1>MINI<br><em>GARAGE</em></h1>
+            <p>Premium MINI Cooper service, diagnostics and performance care.</p>
+            <div class="hero-actions">
+              <button class="button primary" type="button" data-screen="booking">Book Service</button>
+              <button class="button ghost" type="button" data-screen="calculator">Calculate Cost</button>
+            </div>
+          </div>
+        </article>
+
+        <div class="quick-row">
+          <button type="button" data-screen="models"><span>09</span>View Models</button>
+          <button type="button" data-screen="services"><span>12</span>Services</button>
+          <button type="button" data-screen="parts"><span>16</span>Parts</button>
+        </div>
+
+        <div class="section-head"><div><small>WHY MINI GARAGE</small><h2>Everything MINI.</h2></div></div>
+        <div class="feature-grid" id="feature-grid"></div>
+
+        <article class="promo-card">
+          <div><small>FIRST VISIT</small><h2>Know your MINI better.</h2><p>Book a complete computer diagnostic and receive a clear health report.</p></div>
+          <button class="circle-button" type="button" data-screen="booking" aria-label="Book diagnostics">↗</button>
+        </article>
+      </section>
+
+      <section class="screen" data-view="services">
+        <div class="page-intro"><small>MINI CARE</small><h1>Services</h1><p>Specialist maintenance with transparent starting prices and realistic timings.</p></div>
+        <div class="chip-row" id="service-filters"></div>
+        <div class="card-list" id="services-list"></div>
+      </section>
+
+      <section class="screen" data-view="calculator">
+        <div class="page-intro"><small>SMART ESTIMATE</small><h1>Service Calculator</h1><p>Get an approximate maintenance range in less than a minute.</p></div>
+        <form class="panel calculator-form" id="calculator-form">
+          <label>MINI model<select name="model" id="calc-model" required></select></label>
+          <div class="form-row">
+            <label>Year<select name="year" id="calc-year" required></select></label>
+            <label>Mileage<input name="mileage" type="number" min="0" max="500000" step="1000" placeholder="65 000 km" required></label>
+          </div>
+          <label>Service type<select name="service" id="calc-service" required></select></label>
+          <button class="button primary wide" type="submit">Calculate Estimate</button>
+        </form>
+        <article class="estimate-card" id="estimate-result" hidden>
+          <small>YOUR ESTIMATE</small><h2 id="estimate-price">—</h2>
+          <div class="estimate-stats"><span><small>TIME</small><b id="estimate-time">—</b></span><span><small>CONFIDENCE</small><b>Approximate</b></span></div>
+          <p id="estimate-advice"></p>
+          <button class="button primary wide" type="button" data-screen="booking">Book Service</button>
+        </article>
+      </section>
+
+      <section class="screen" data-view="models">
+        <div class="page-intro"><small>THE MINI FAMILY</small><h1>Find your character.</h1><p>Explore the models our specialists know inside and out.</p></div>
+        <div class="model-list" id="models-list"></div>
+      </section>
+
+      <section class="screen" data-view="parts">
+        <div class="page-intro"><small>ORIGINAL QUALITY</small><h1>Parts</h1><p>Maintenance and performance parts selected for fit, safety and character.</p></div>
+        <div class="search-box"><span>⌕</span><input id="parts-search" type="search" placeholder="Search parts"></div>
+        <div class="chip-row horizontal" id="parts-filters"></div>
+        <div class="parts-grid" id="parts-list"></div>
+      </section>
+
+      <section class="screen" data-view="booking">
+        <div class="page-intro"><small>BOOK IN TELEGRAM</small><h1>Service request</h1><p>Tell us about your MINI. A specialist will confirm details and timing.</p></div>
+        <form class="panel booking-form" id="booking-form">
+          <label>Name<input name="name" autocomplete="name" placeholder="Your name" required></label>
+          <label>Phone<input name="phone" type="tel" autocomplete="tel" placeholder="+7 999 000 00 00" required></label>
+          <label>Telegram username<input name="telegram" placeholder="@username"></label>
+          <label>MINI model<select name="model" id="booking-model" required></select></label>
+          <div class="form-row">
+            <label>Year<input name="year" type="number" min="2001" max="2026" placeholder="2022" required></label>
+            <label>Mileage<input name="mileage" type="number" min="0" max="500000" placeholder="45000" required></label>
+          </div>
+          <label>Service needed<select name="service" id="booking-service" required></select></label>
+          <label>Preferred date<input name="date" type="date" required></label>
+          <label>Comment<textarea name="comment" rows="4" placeholder="Symptoms, wishes or additional details"></textarea></label>
+          <button class="button primary wide" type="submit">Create Service Request</button>
+        </form>
+        <article class="request-summary" id="request-summary" hidden>
+          <div class="success-icon">✓</div><small>REQUEST CREATED</small><h2>Thank you.</h2>
+          <p>Your service request has been created. MINI Garage specialist will contact you shortly.</p>
+          <pre id="request-text"></pre>
+          <button class="button ghost wide" id="copy-request" type="button">Copy Request Text</button>
+        </article>
+      </section>
+
+      <section class="screen" data-view="about">
+        <div class="page-intro"><small>ABOUT US</small><h1>Built around MINI.</h1><p>A specialist environment for precise service, honest diagnostics and individual care.</p></div>
+        <img class="editorial-image" src="assets/images/workshop.jpg" alt="MINI Garage specialist workshop">
+        <div class="story-grid">
+          <article><b>10+</b><span>Years of MINI expertise</span></article><article><b>2,400</b><span>Cars serviced</span></article><article><b>4.9</b><span>Average client rating</span></article><article><b>24h</b><span>Fast diagnostics</span></article>
+        </div>
+        <article class="panel prose"><h2>Independent expertise. Dealer-level standards.</h2><p>We work with every generation of MINI Cooper, from daily maintenance to diagnostics, coding and JCW performance projects. Every recommendation is explained before work begins.</p><p class="portfolio-note">Portfolio concept by Almir Khialov</p></article>
+      </section>
+
+      <section class="screen" data-view="contact">
+        <div class="page-intro"><small>GET IN TOUCH</small><h1>Contact</h1><p>Questions about service, a MINI inspection or a performance project? Talk to us.</p></div>
+        <article class="contact-card"><span class="brand-mark large">MG</span><h2>MINI Garage</h2><p>Premium MINI Service & Sales</p></article>
+        <div class="contact-list">
+          <a href="https://t.me/almir328" target="_blank" rel="noopener"><span>Telegram</span><b>@almir328 ↗</b></a>
+          <a href="https://almirkhialov.ru" target="_blank" rel="noopener"><span>Website</span><b>almirkhialov.ru ↗</b></a>
+          <div><span>Working hours</span><b>Mon–Sat: 10:00–20:00<br>Sunday: by appointment</b></div>
+        </div>
+        <button class="button primary wide" type="button" data-screen="booking">Book Service</button>
+      </section>
+    </main>
+
+    <nav class="bottom-nav" aria-label="Main navigation">
+      <button class="active" type="button" data-screen="home"><span>⌂</span><small>Home</small></button>
+      <button type="button" data-screen="services"><span>◇</span><small>Services</small></button>
+      <button type="button" data-screen="calculator"><span>⌁</span><small>Estimate</small></button>
+      <button type="button" data-screen="booking"><span>＋</span><small>Book</small></button>
+      <button type="button" data-screen="contact"><span>•••</span><small>More</small></button>
+    </nav>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
+</body>
+</html>

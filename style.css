@@ -1401,6 +1401,78 @@ button {
   backdrop-filter: blur(15px);
 }
 
+.mini-app-panel {
+  overflow: hidden;
+  padding-bottom: 14px;
+  color: #fff;
+  background: #101216;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.mini-app-panel .assistant-head {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.mini-app-panel .assistant-head i {
+  color: #111;
+  background: #f4b400;
+  font-size: 7px;
+}
+
+.mini-app-panel .assistant-head small {
+  color: #f4b400;
+}
+
+.mini-app-hero {
+  min-height: 160px;
+  margin: 0 -5px;
+  padding: 57px 16px 15px;
+  border-radius: 14px;
+  background:
+    linear-gradient(180deg, transparent, rgba(5, 6, 8, 0.92)),
+    url("mini-garage-fix/assets/images/hero-jcw.jpg") center / cover;
+}
+
+.mini-app-hero small,
+.mini-app-hero strong {
+  display: block;
+}
+
+.mini-app-hero small {
+  color: #f4b400;
+  font-size: 6px;
+  letter-spacing: 0.12em;
+}
+
+.mini-app-hero strong {
+  margin-top: 6px;
+  font-family: Manrope, sans-serif;
+  font-size: 22px;
+  line-height: 0.88;
+  letter-spacing: -0.055em;
+}
+
+.mini-app-hero em {
+  color: #f4b400;
+  font-style: normal;
+}
+
+.mini-app-tabs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.mini-app-tabs span {
+  padding: 7px 3px;
+  border-radius: 7px;
+  color: #9fa7b5;
+  background: #1a1e24;
+  font-size: 6px;
+  text-align: center;
+}
+
 .assistant-head {
   margin-bottom: 24px;
   padding-bottom: 14px;
