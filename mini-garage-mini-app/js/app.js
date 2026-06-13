@@ -67,7 +67,11 @@ function showScreen(name, push = true) {
 function goBack() { const previous = state.history.pop() || "home"; showScreen(previous, false); }
 function syncMainButton() {
   if (!tg?.MainButton) return;
-  if (state.screen === "booking") { tg.MainButton.setText("CREATE SERVICE REQUEST"); tg.MainButton.show(); }
+  if (state.screen === "booking") {
+    tg.MainButton.setParams?.({ text: "CREATE SERVICE REQUEST", color: "#f4b400", text_color: "#0b0c0f" });
+    tg.MainButton.setText("CREATE SERVICE REQUEST");
+    tg.MainButton.show();
+  }
   else { tg.MainButton.hide(); }
 }
 
@@ -124,5 +128,15 @@ $("#booking-form").addEventListener("submit", (event) => {
 });
 $("#copy-request").addEventListener("click", async () => { await navigator.clipboard.writeText($("#request-text").textContent); haptic(); toast("Request copied"); });
 
-if (tg) { tg.ready(); tg.expand(); tg.setHeaderColor("#0b0c0f"); tg.setBackgroundColor("#0b0c0f"); tg.BackButton.onClick(goBack); tg.MainButton.onClick(() => $("#booking-form").requestSubmit()); }
+if (tg) {
+  document.documentElement.classList.add("telegram-app");
+  tg.ready();
+  tg.expand();
+  tg.disableVerticalSwipes?.();
+  tg.setHeaderColor("#0b0c0f");
+  tg.setBackgroundColor("#0b0c0f");
+  tg.setBottomBarColor?.("#0f1115");
+  tg.BackButton.onClick(goBack);
+  tg.MainButton.onClick(() => $("#booking-form").requestSubmit());
+}
 renderFeatures(); renderServices(); renderModels(); renderParts(); initForms(); syncMainButton();
