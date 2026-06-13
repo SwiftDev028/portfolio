@@ -682,6 +682,62 @@ button {
   font-style: normal;
 }
 
+.skyline-realty-visual {
+  min-height: 540px;
+  background: #25221d;
+}
+
+.skyline-realty-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(27, 26, 24, 0.82), rgba(27, 26, 24, 0.08) 78%);
+}
+
+.skyline-realty-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .skyline-realty-visual > img {
+  transform: scale(1.025);
+}
+
+.skyline-realty-brand {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 34px;
+  display: grid;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.skyline-realty-brand small,
+.skyline-realty-brand span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.skyline-realty-brand strong {
+  margin: 14px 0;
+  font-family: Georgia, serif;
+  font-size: clamp(48px, 5.5vw, 78px);
+  line-height: 0.84;
+  letter-spacing: -0.045em;
+}
+
+.skyline-realty-brand em {
+  color: #c39a5b;
+  font-style: normal;
+}
+
 .status-dot,
 .ai-label {
   display: flex;
