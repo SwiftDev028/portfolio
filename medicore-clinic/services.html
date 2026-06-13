@@ -1,0 +1,8 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Medical consultations, diagnostics, check-ups and preventive services at MEDICORE CLINIC."><title>Services — MEDICORE CLINIC</title><link rel="stylesheet" href="css/style.css"></head><body><main>
+<section class="page-hero"><div class="container"><span class="eyebrow">Consultations · Diagnostics · Prevention</span><h1>Medical services with clear next steps.</h1><p>Explore specialist consultations, advanced diagnostics and preventive health programs.</p></div></section>
+<section class="section"><div class="container"><div class="filter service-filter">
+<select name="serviceType" aria-label="Service type"><option value="">All service types</option><option>Popular</option><option>Consultation</option><option>Diagnostics</option><option>Service</option></select>
+<select name="serviceDepartment" aria-label="Department"><option value="">All departments</option><option>Cardiology</option><option>Neurology</option><option>Dermatology</option><option>Diagnostics</option><option>Check-ups</option></select>
+<select name="servicePrice" aria-label="Maximum price"><option value="0">Any price</option><option value="5000">Up to 5,000 ₽</option><option value="10000">Up to 10,000 ₽</option></select>
+<select name="serviceDuration" aria-label="Maximum duration"><option value="0">Any duration</option><option value="45">Up to 45 min</option><option value="60">Up to 60 min</option></select>
+</div><div class="grid services" id="serviceCatalog"></div></div></section></main><script src="js/app.js"></script><script>document.querySelector('#serviceCatalog').innerHTML=serviceCards();observe()</script></body></html>

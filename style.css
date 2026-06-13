@@ -738,6 +738,62 @@ button {
   font-style: normal;
 }
 
+.medicore-visual {
+  min-height: 540px;
+  background: #dff1f2;
+}
+
+.medicore-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(16, 35, 38, 0.8), rgba(16, 35, 38, 0.03) 78%);
+}
+
+.medicore-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .medicore-visual > img {
+  transform: scale(1.025);
+}
+
+.medicore-brand {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 34px;
+  display: grid;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.medicore-brand small,
+.medicore-brand span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.medicore-brand strong {
+  margin: 14px 0;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(43px, 5vw, 72px);
+  line-height: 0.9;
+  letter-spacing: -0.055em;
+}
+
+.medicore-brand em {
+  color: #7bc6b8;
+  font-style: normal;
+}
+
 .status-dot,
 .ai-label {
   display: flex;

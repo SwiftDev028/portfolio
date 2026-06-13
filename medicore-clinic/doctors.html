@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Browse MEDICORE CLINIC specialists by specialty, language, experience and rating."><title>Doctors — MEDICORE CLINIC</title><link rel="stylesheet" href="css/style.css"></head><body><main>
+<section class="page-hero"><div class="container"><span class="eyebrow">25+ medical specialists</span><h1>Find your doctor.</h1><p>Search experienced specialists and choose a convenient appointment time.</p></div></section>
+<section class="section"><div class="container"><div class="filter doctor-filter">
+<input name="doctorSearch" placeholder="Search by doctor name or specialty" aria-label="Search doctors">
+<select name="specialty" aria-label="Specialty"><option value="">All specialties</option><option>Cardiologist</option><option>Neurologist</option><option>Dermatologist</option><option>Pediatrician</option><option>Gynecologist</option></select>
+<select name="experience" aria-label="Experience"><option value="0">Any experience</option><option value="10">10+ years</option><option value="15">15+ years</option></select>
+<select name="language" aria-label="Language"><option value="">All languages</option><option>English</option><option>Russian</option><option>Turkish</option></select>
+<select name="availability" aria-label="Availability"><option value="">Any availability</option><option value="Today">Available today</option><option value="Tomorrow">Available tomorrow</option></select>
+<select name="rating" aria-label="Rating"><option value="0">Any rating</option><option value="4.8">4.8+</option><option value="4.9">4.9+</option></select>
+</div><div class="grid doctors" id="doctorCatalog"></div></div></section></main><script src="js/app.js"></script><script>document.querySelector('#doctorCatalog').innerHTML=doctorCards();observe()</script></body></html>
