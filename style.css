@@ -626,6 +626,62 @@ button {
   letter-spacing: 0.08em;
 }
 
+.prime-build-visual {
+  min-height: 540px;
+  background: #2a2520;
+}
+
+.prime-build-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(35, 30, 25, 0.82), rgba(35, 30, 25, 0.06) 80%);
+}
+
+.prime-build-visual > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .prime-build-visual > img {
+  transform: scale(1.025);
+}
+
+.prime-build-brand {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 34px;
+  display: grid;
+  color: #fff;
+  transform: translateY(-50%);
+}
+
+.prime-build-brand small,
+.prime-build-brand span {
+  font-size: 8px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.prime-build-brand strong {
+  margin: 14px 0;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(48px, 5.5vw, 78px);
+  line-height: 0.84;
+  letter-spacing: -0.065em;
+}
+
+.prime-build-brand em {
+  color: #d7ad70;
+  font-style: normal;
+}
+
 .status-dot,
 .ai-label {
   display: flex;
