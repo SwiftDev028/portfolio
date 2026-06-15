@@ -1,16 +1,18 @@
-# AZURE RESORT — Luxury Resort Website
+# AZURE RESORT — сайт премиального курорта
 
-A premium hospitality website featuring online booking, luxury accommodations, wellness experiences, dining, spa services and high-end resort UX.
+Премиальная многостраничная концепция сайта курорта с онлайн-бронированием, номерами и виллами, ресторанами, SPA-программами, впечатлениями и продуманным UX гостеприимства.
 
-## Technologies
+## Технологии
 
 - HTML
 - CSS
 - JavaScript
-- Responsive Design
-- UI/UX Design
-- Hospitality Website
-- Booking Flow
-- Luxury Brand Design
+- Адаптивный дизайн
+- UI/UX-дизайн
+- Сайт гостиничного комплекса
+- Многошаговое бронирование
+- Дизайн премиального бренда
 
-Created as a premium portfolio case for [almirkhialov.ru](https://almirkhialov.ru). This is a static concept and does not create real reservations or payments.
+Создано как портфолио-кейс для [almirkhialov.ru](https://almirkhialov.ru). Это статическая концепция, которая не создает реальных бронирований и платежей.
+
+Концепция портфолио: Almir Khialov.
