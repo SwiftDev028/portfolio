@@ -1,1 +1,31 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Industries — NORDCORE ENGINEERING</title><meta name="description" content="Engineering and construction expertise across energy, manufacturing, logistics, healthcare, technology and transportation."><link rel="stylesheet" href="css/style.css"><script src="js/app.js" defer></script></head><body data-page="industries"><main><section class="page-hero"><div class="container page-intro"><div class="breadcrumbs">Home / <b>Industries</b></div><div class="eyebrow">Sector expertise</div><h1>Technical depth where performance matters.</h1><p>Sector-specific engineering and delivery models shaped around operational risk, regulation and asset performance.</p></div></section><section class="section"><div class="container"><div class="grid industries-grid" id="industry-cards"></div></div></section><section class="section surface"><div class="container"><div class="section-head"><div><div class="eyebrow">Connected expertise</div><h2>Services aligned to sector priorities.</h2></div></div><div class="industry-table" id="industry-table"></div></div></section></main><script>const inds=[['Energy','Resilient generation, utility and transition infrastructure.','EPC · Engineering · Modernization'],['Manufacturing','Flexible plants designed for process reliability and expansion.','Industrial construction · BIM'],['Logistics','Automated warehouses and multimodal distribution systems.','EPC · Project management'],['Commercial Real Estate','High-performance offices, campuses and mixed-use assets.','Design · Commercial construction'],['Government Infrastructure','Accountable delivery of essential public assets.','Infrastructure · Program controls'],['Technology','Data-rich campuses, laboratories and critical facilities.','Engineering · Facility modernization'],['Healthcare','Controlled environments that protect clinical continuity.','Technical consulting · Construction'],['Transportation','Rail, metro and intermodal infrastructure for growing cities.','Infrastructure · Engineering']];addEventListener('DOMContentLoaded',()=>{industryCards.innerHTML=inds.map((x,i)=>`<article class="card industry-card reveal"><b>${String(i+1).padStart(2,'0')}</b><h3>${x[0]}</h3><p>${x[1]}</p><a class="arrow-link" href="projects.html">View case studies</a></article>`).join('');industryTable.innerHTML=inds.map(x=>`<div class="industry-row"><h3>${x[0]}</h3><p>${x[1]}</p><p><b>Services</b><br>${x[2]}</p></div>`).join('')})</script></body></html>
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Отрасли — NORDCORE ENGINEERING</title>
+  <meta name="description" content="Инженерная и строительная экспертиза в энергетике, производстве, логистике, здравоохранении, технологиях и транспорте.">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body data-page="industries">
+  <main>
+    <section class="page-hero"><div class="container page-intro"><div class="breadcrumbs">Главная / <b>Отрасли</b></div><div class="eyebrow">Отраслевая экспертиза</div><h1>Техническая глубина там, где важен результат.</h1><p>Специализированные инженерные и строительные модели, учитывающие операционные риски, нормативные требования и эффективность активов.</p></div></section>
+    <section class="section"><div class="container"><div class="grid industries-grid" id="industry-cards"></div></div></section>
+    <section class="section surface"><div class="container"><div class="section-head"><div><div class="eyebrow">Связанная экспертиза</div><h2>Услуги, настроенные под приоритеты отрасли.</h2></div></div><div class="industry-table" id="industry-table"></div></div></section>
+  </main>
+  <script>
+    const inds=[
+      ['Энергетика','Надежная генерация, коммунальная и переходная инфраструктура.','EPC · Проектирование · Модернизация'],
+      ['Производство','Гибкие предприятия для стабильных процессов и будущего расширения.','Промышленное строительство · BIM'],
+      ['Логистика','Автоматизированные склады и мультимодальные распределительные системы.','EPC · Управление проектами'],
+      ['Коммерческая недвижимость','Эффективные офисы, кампусы и многофункциональные объекты.','Проектирование · Коммерческое строительство'],
+      ['Государственная инфраструктура','Ответственная реализация ключевых общественных объектов.','Инфраструктура · Программный контроль'],
+      ['Технологии','Цифровые кампусы, лаборатории и критически важные объекты.','Проектирование · Модернизация объектов'],
+      ['Здравоохранение','Контролируемая среда с сохранением непрерывности клинических процессов.','Технический консалтинг · Строительство'],
+      ['Транспорт','Железнодорожная, городская и интермодальная инфраструктура.','Инфраструктура · Проектирование']
+    ];
+    addEventListener('DOMContentLoaded',()=>{industryCards.innerHTML=inds.map((x,i)=>`<article class="card industry-card reveal"><b>${String(i+1).padStart(2,'0')}</b><h3>${x[0]}</h3><p>${x[1]}</p><a class="arrow-link" href="projects.html">Смотреть проекты</a></article>`).join('');industryTable.innerHTML=inds.map(x=>`<div class="industry-row"><h3>${x[0]}</h3><p>${x[1]}</p><p><b>Услуги</b><br>${x[2]}</p></div>`).join('')})
+  </script>
+</body>
+</html>

@@ -1,19 +1,105 @@
-const services=[['Industrial Construction','Production facilities, warehouses and technically complex industrial environments.','Manufacturing · Energy · Logistics'],['Commercial Construction','Enterprise offices, campuses, retail and mixed-use developments.','Real Estate · Technology · Healthcare'],['Infrastructure Development','Transport, utilities and public systems designed for long-term resilience.','Government · Transportation · Energy'],['Engineering Design','Integrated structural, civil, MEP and digital engineering coordination.','All sectors'],['Project Management','Schedule, cost, procurement and quality control from concept to handover.','All sectors'],['EPC Contracting','Single-point responsibility for engineering, procurement and construction.','Industrial · Energy · Infrastructure'],['Technical Consulting','Feasibility, due diligence, value engineering and risk assessment.','Investors · Developers · Operators'],['Facility Modernization','Live-site upgrades that improve capacity, efficiency and compliance.','Manufacturing · Logistics · Healthcare']];
-const projects=[
-{name:'Northern Logistics Hub',type:'Industrial Complex',filter:'industrial',location:'Rotterdam, Netherlands',budget:'€186M',timeline:'28 months',area:'164,000 m²',image:'assets/images/logistics-hub.jpg',desc:'Automated high-throughput distribution campus with integrated rail and road logistics.'},
-{name:'Skyline Business Center',type:'Commercial Development',filter:'commercial',location:'Frankfurt, Germany',budget:'€94M',timeline:'24 months',area:'72,000 m²',image:'assets/images/project-detail.jpg',desc:'High-performance business campus designed for flexible workplaces and low-energy operation.'},
-{name:'Coastal Energy Facility',type:'Infrastructure Project',filter:'energy',location:'Aberdeen, United Kingdom',budget:'€248M',timeline:'34 months',area:'118,000 m²',image:'assets/images/energy-facility.jpg',desc:'Resilient coastal utility infrastructure delivered under complex operational constraints.'},
-{name:'Metro Transport Expansion',type:'Public Infrastructure',filter:'infrastructure',location:'Warsaw, Poland',budget:'€312M',timeline:'42 months',area:'18 km corridor',image:'assets/images/hero-industrial.jpg',desc:'Transport capacity expansion including stations, systems and public realm integration.'},
-{name:'Arctic Manufacturing Plant',type:'Industrial Construction',filter:'industrial',location:'Oulu, Finland',budget:'€172M',timeline:'30 months',area:'96,000 m²',image:'assets/images/hero-industrial.jpg',desc:'Climate-resilient advanced manufacturing facility with modular production halls.'},
-{name:'Green Power Station',type:'Energy Sector',filter:'energy',location:'Aarhus, Denmark',budget:'€221M',timeline:'32 months',area:'83,000 m²',image:'assets/images/energy-facility.jpg',desc:'Low-carbon generation campus with digital asset monitoring and future-ready systems.'},
-{name:'Innovation Technology Campus',type:'Commercial Project',filter:'commercial',location:'Dublin, Ireland',budget:'€128M',timeline:'26 months',area:'88,000 m²',image:'assets/images/project-detail.jpg',desc:'Research, office and laboratory campus created for collaborative technology teams.'},
-{name:'Global Distribution Center',type:'Logistics Infrastructure',filter:'infrastructure',location:'Antwerp, Belgium',budget:'€154M',timeline:'25 months',area:'142,000 m²',image:'assets/images/logistics-hub.jpg',desc:'Multi-modal distribution center with automated storage and energy-efficient operations.'}
+const services = [
+  ['Промышленное строительство', 'Производственные комплексы, склады и технически сложные промышленные объекты.', 'Производство · Энергетика · Логистика'],
+  ['Коммерческое строительство', 'Корпоративные офисы, кампусы, торговые и многофункциональные пространства.', 'Недвижимость · Технологии · Здравоохранение'],
+  ['Инфраструктурные проекты', 'Транспортные, коммунальные и общественные системы с высоким ресурсом надежности.', 'Государственный сектор · Транспорт · Энергетика'],
+  ['Инженерное проектирование', 'Комплексная координация конструктивных, гражданских, инженерных и цифровых решений.', 'Все отрасли'],
+  ['Управление проектами', 'Контроль сроков, бюджета, закупок и качества от концепции до ввода в эксплуатацию.', 'Все отрасли'],
+  ['EPC-контракты', 'Единая ответственность за проектирование, закупки и строительство.', 'Промышленность · Энергетика · Инфраструктура'],
+  ['Технический консалтинг', 'Технико-экономическое обоснование, аудит, оптимизация стоимости и оценка рисков.', 'Инвесторы · Девелоперы · Операторы'],
+  ['Модернизация объектов', 'Обновление действующих площадок для роста мощности, эффективности и соответствия нормам.', 'Производство · Логистика · Здравоохранение']
 ];
-const nav=[['Home','index.html'],['Services','services.html'],['Projects','projects.html'],['Industries','industries.html'],['About','about.html'],['Careers','careers.html'],['Contact','contact.html']];
-function header(){const page=document.body.dataset.page;return `<header class="site-header ${page==='home'?'':'inner'}"><div class="container nav"><a class="logo" href="index.html"><i class="logo-mark"></i>NORDCORE</a><nav class="desktop-nav">${nav.map(([n,u])=>n==='Services'?`<div class="has-mega"><button class="menu-trigger ${page==='services'?'active':''}">Services</button><div class="mega-menu"><div class="container mega-grid"><div><span class="eyebrow">Engineering capability</span><h3>Built for complex delivery</h3><p>Integrated services from feasibility and design through construction, commissioning and modernization.</p></div><div class="mega-links">${services.slice(0,4).map(s=>`<a href="services.html">${s[0]}</a>`).join('')}</div><div class="mega-links">${services.slice(4).map(s=>`<a href="services.html">${s[0]}</a>`).join('')}</div></div></div></div>`:`<a class="${page===n.toLowerCase()?'active':''}" href="${u}">${n}</a>`).join('')}</nav><a class="btn btn-primary header-cta" href="contact.html">Request Consultation</a><button class="burger" aria-label="Open menu"><span></span></button></div></header><div class="mobile-menu">${nav.map(([n,u])=>`<a href="${u}">${n}</a>`).join('')}<a href="contact.html">Request Consultation ↗</a></div>`}
-function footer(){return `<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html"><i class="logo-mark"></i>NORDCORE</a><p>Industrial construction and engineering solutions for complex assets across Europe and international markets.</p></div><div class="footer-col"><h4>Services</h4><a href="services.html">Industrial Construction</a><a href="services.html">Engineering Design</a><a href="services.html">EPC Contracting</a></div><div class="footer-col"><h4>Projects</h4><a href="projects.html">Industrial</a><a href="projects.html">Infrastructure</a><a href="projects.html">Commercial</a></div><div class="footer-col"><h4>Industries</h4><a href="industries.html">Energy</a><a href="industries.html">Manufacturing</a><a href="industries.html">Logistics</a></div><div class="footer-col"><h4>Company</h4><a href="about.html">About</a><a href="careers.html">Careers</a><a href="contact.html">Contact</a></div></div><div class="footer-bottom">© 2026 NORDCORE ENGINEERING <span>Portfolio Concept by Almir Khialov</span></div></div></footer>`}
-function serviceCards(count=8){return services.slice(0,count).map((s,i)=>`<article class="card service-card reveal"><span class="service-number">${String(i+1).padStart(2,'0')}</span><i class="service-icon">${['▰','⌂','≋','⌁','✓','EPC','△','↻'][i]}</i><h3>${s[0]}</h3><p>${s[1]}</p><small>${s[2]}</small></article>`).join('')}
-function projectCards(list=projects){return list.map((p,i)=>`<article class="card project-card reveal" data-filter="${p.filter}"><div class="project-media"><img src="${p.image}" alt="${p.name}" loading="lazy"></div><div class="project-info"><div class="project-meta"><span>${p.type}</span><span>0${i+1}</span></div><h3>${p.name}</h3><p>${p.desc}</p><div class="project-facts"><span><b>${p.location}</b>Location</span><span><b>${p.budget}</b>Budget</span><span><b>${p.area}</b>Area</span></div><a class="arrow-link" href="project-detail.html">View case study</a></div></article>`).join('')}
-Object.assign(window,{homeServices:document.querySelector('#home-services'),serviceDetails:document.querySelector('#service-details'),projectsGrid:document.querySelector('#projects-grid'),industryCards:document.querySelector('#industry-cards'),industryTable:document.querySelector('#industry-table'),jobs:document.querySelector('#jobs')});
-document.addEventListener('DOMContentLoaded',()=>{document.body.insertAdjacentHTML('afterbegin',header());document.body.insertAdjacentHTML('beforeend',footer());const head=document.querySelector('.site-header'),burger=document.querySelector('.burger'),mobile=document.querySelector('.mobile-menu');addEventListener('scroll',()=>head.classList.toggle('scrolled',scrollY>30));burger.onclick=()=>{mobile.classList.toggle('open');document.body.classList.toggle('menu-open')};const obs=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});document.querySelectorAll('.reveal').forEach(x=>obs.observe(x));document.querySelectorAll('[data-counter]').forEach(el=>{const max=+el.dataset.counter;let done=false;new IntersectionObserver(es=>{if(es[0].isIntersecting&&!done){done=true;let n=0;const t=setInterval(()=>{n+=Math.ceil(max/45);if(n>=max){n=max;clearInterval(t)}el.textContent=n+(el.dataset.suffix||'')},28)}}).observe(el)});document.querySelectorAll('.filter').forEach(b=>b.onclick=()=>{document.querySelectorAll('.filter').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.querySelectorAll('.project-card').forEach(c=>c.classList.toggle('hidden',b.dataset.filter!=='all'&&c.dataset.filter!==b.dataset.filter))});document.querySelectorAll('.job').forEach(j=>j.onclick=()=>j.classList.toggle('open'));document.querySelectorAll('.form').forEach(f=>f.onsubmit=e=>{e.preventDefault();f.querySelector('.form-status').classList.add('show');f.reset()})});
-document.addEventListener('click',event=>{const job=event.target.closest('.job');if(job&&!job.onclick)job.classList.toggle('open')});
+
+const projects = [
+  {name:'Северный логистический хаб',type:'Промышленный комплекс',filter:'industrial',location:'Роттердам, Нидерланды',budget:'€186 млн',timeline:'28 месяцев',area:'164 000 м²',image:'assets/images/logistics-hub.jpg',desc:'Автоматизированный распределительный кампус с интегрированной железнодорожной и автомобильной логистикой.'},
+  {name:'Бизнес-центр Skyline',type:'Коммерческая недвижимость',filter:'commercial',location:'Франкфурт, Германия',budget:'€94 млн',timeline:'24 месяца',area:'72 000 м²',image:'assets/images/project-detail.jpg',desc:'Энергоэффективный деловой кампус с гибкими офисными пространствами.'},
+  {name:'Прибрежный энергетический комплекс',type:'Инфраструктурный проект',filter:'energy',location:'Абердин, Великобритания',budget:'€248 млн',timeline:'34 месяца',area:'118 000 м²',image:'assets/images/energy-facility.jpg',desc:'Надежная прибрежная инженерная инфраструктура, реализованная в условиях действующего производства.'},
+  {name:'Расширение метрополитена',type:'Общественная инфраструктура',filter:'infrastructure',location:'Варшава, Польша',budget:'€312 млн',timeline:'42 месяца',area:'Коридор 18 км',image:'assets/images/hero-industrial.jpg',desc:'Расширение транспортной сети: станции, инженерные системы и благоустройство общественных пространств.'},
+  {name:'Арктический производственный завод',type:'Промышленное строительство',filter:'industrial',location:'Оулу, Финляндия',budget:'€172 млн',timeline:'30 месяцев',area:'96 000 м²',image:'assets/images/hero-industrial.jpg',desc:'Устойчивый к суровому климату производственный комплекс с модульными цехами.'},
+  {name:'Энергоцентр Green Power',type:'Энергетика',filter:'energy',location:'Орхус, Дания',budget:'€221 млн',timeline:'32 месяца',area:'83 000 м²',image:'assets/images/energy-facility.jpg',desc:'Низкоуглеродный энергетический кампус с цифровым мониторингом активов и резервом для развития.'},
+  {name:'Инновационный технологический кампус',type:'Коммерческий проект',filter:'commercial',location:'Дублин, Ирландия',budget:'€128 млн',timeline:'26 месяцев',area:'88 000 м²',image:'assets/images/project-detail.jpg',desc:'Исследовательский, офисный и лабораторный кампус для совместной работы технологических команд.'},
+  {name:'Глобальный распределительный центр',type:'Логистическая инфраструктура',filter:'infrastructure',location:'Антверпен, Бельгия',budget:'€154 млн',timeline:'25 месяцев',area:'142 000 м²',image:'assets/images/logistics-hub.jpg',desc:'Мультимодальный распределительный центр с автоматизированным хранением и энергоэффективной эксплуатацией.'}
+];
+
+const nav = [
+  ['Главная', 'index.html', 'home'],
+  ['Услуги', 'services.html', 'services'],
+  ['Проекты', 'projects.html', 'projects'],
+  ['Отрасли', 'industries.html', 'industries'],
+  ['О компании', 'about.html', 'about'],
+  ['Карьера', 'careers.html', 'careers'],
+  ['Контакты', 'contact.html', 'contact']
+];
+
+function header() {
+  const page = document.body.dataset.page;
+  return `<header class="site-header ${page === 'home' ? '' : 'inner'}"><div class="container nav"><a class="logo" href="index.html"><i class="logo-mark"></i>NORDCORE</a><nav class="desktop-nav">${nav.map(([name, url, key]) => key === 'services' ? `<div class="has-mega"><button class="menu-trigger ${page === 'services' ? 'active' : ''}">Услуги</button><div class="mega-menu"><div class="container mega-grid"><div><span class="eyebrow">Инженерная экспертиза</span><h3>Для сложных проектов</h3><p>Комплексные услуги: от оценки и проектирования до строительства, пусконаладки и модернизации.</p></div><div class="mega-links">${services.slice(0, 4).map(service => `<a href="services.html">${service[0]}</a>`).join('')}</div><div class="mega-links">${services.slice(4).map(service => `<a href="services.html">${service[0]}</a>`).join('')}</div></div></div></div>` : `<a class="${page === key ? 'active' : ''}" href="${url}">${name}</a>`).join('')}</nav><a class="btn btn-primary header-cta" href="contact.html">Запросить консультацию</a><button class="burger" aria-label="Открыть меню"><span></span></button></div></header><div class="mobile-menu">${nav.map(([name, url]) => `<a href="${url}">${name}</a>`).join('')}<a href="contact.html">Запросить консультацию ↗</a></div>`;
+}
+
+function footer() {
+  return `<footer class="site-footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a class="logo" href="index.html"><i class="logo-mark"></i>NORDCORE</a><p>Промышленное строительство и инженерные решения для сложных объектов в Европе и на международных рынках.</p></div><div class="footer-col"><h4>Услуги</h4><a href="services.html">Промышленное строительство</a><a href="services.html">Инженерное проектирование</a><a href="services.html">EPC-контракты</a></div><div class="footer-col"><h4>Проекты</h4><a href="projects.html">Промышленные</a><a href="projects.html">Инфраструктурные</a><a href="projects.html">Коммерческие</a></div><div class="footer-col"><h4>Отрасли</h4><a href="industries.html">Энергетика</a><a href="industries.html">Производство</a><a href="industries.html">Логистика</a></div><div class="footer-col"><h4>Компания</h4><a href="about.html">О компании</a><a href="careers.html">Карьера</a><a href="contact.html">Контакты</a></div></div><div class="footer-bottom">© 2026 NORDCORE ENGINEERING <span>Концепция портфолио: Almir Khialov</span></div></div></footer>`;
+}
+
+function serviceCards(count = 8) {
+  return services.slice(0, count).map((service, index) => `<article class="card service-card reveal"><span class="service-number">${String(index + 1).padStart(2, '0')}</span><i class="service-icon">${['▰', '⌂', '≋', '⌁', '✓', 'EPC', '△', '↻'][index]}</i><h3>${service[0]}</h3><p>${service[1]}</p><small>${service[2]}</small></article>`).join('');
+}
+
+function projectCards(list = projects) {
+  return list.map((project, index) => `<article class="card project-card reveal" data-filter="${project.filter}"><div class="project-media"><img src="${project.image}" alt="${project.name}" loading="lazy"></div><div class="project-info"><div class="project-meta"><span>${project.type}</span><span>${String(index + 1).padStart(2, '0')}</span></div><h3>${project.name}</h3><p>${project.desc}</p><div class="project-facts"><span><b>${project.location}</b>Локация</span><span><b>${project.budget}</b>Бюджет</span><span><b>${project.area}</b>Площадь</span></div><a class="arrow-link" href="project-detail.html">Смотреть кейс</a></div></article>`).join('');
+}
+
+Object.assign(window, {
+  homeServices: document.querySelector('#home-services'),
+  serviceDetails: document.querySelector('#service-details'),
+  projectsGrid: document.querySelector('#projects-grid'),
+  industryCards: document.querySelector('#industry-cards'),
+  industryTable: document.querySelector('#industry-table'),
+  jobs: document.querySelector('#jobs')
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.body.insertAdjacentHTML('afterbegin', header());
+  document.body.insertAdjacentHTML('beforeend', footer());
+  const head = document.querySelector('.site-header');
+  const burger = document.querySelector('.burger');
+  const mobile = document.querySelector('.mobile-menu');
+  addEventListener('scroll', () => head.classList.toggle('scrolled', scrollY > 30));
+  burger.onclick = () => {
+    mobile.classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+  };
+  const observer = new IntersectionObserver(entries => entries.forEach(entry => entry.isIntersecting && entry.target.classList.add('visible')), {threshold: .12});
+  document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+  document.querySelectorAll('[data-counter]').forEach(element => {
+    const max = +element.dataset.counter;
+    let done = false;
+    new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && !done) {
+        done = true;
+        let value = 0;
+        const timer = setInterval(() => {
+          value += Math.ceil(max / 45);
+          if (value >= max) {
+            value = max;
+            clearInterval(timer);
+          }
+          element.textContent = value + (element.dataset.suffix || '');
+        }, 28);
+      }
+    }).observe(element);
+  });
+  document.querySelectorAll('.filter').forEach(button => button.onclick = () => {
+    document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+    button.classList.add('active');
+    document.querySelectorAll('.project-card').forEach(card => card.classList.toggle('hidden', button.dataset.filter !== 'all' && card.dataset.filter !== button.dataset.filter));
+  });
+  document.querySelectorAll('.form').forEach(form => form.onsubmit = event => {
+    event.preventDefault();
+    form.querySelector('.form-status').classList.add('show');
+    form.reset();
+  });
+});
+
+document.addEventListener('click', event => {
+  const job = event.target.closest('.job');
+  if (job) job.classList.toggle('open');
+});

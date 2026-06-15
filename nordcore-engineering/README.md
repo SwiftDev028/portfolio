@@ -1,26 +1,26 @@
-# NORDCORE ENGINEERING — Corporate Construction Website
+# NORDCORE ENGINEERING — корпоративный сайт строительной компании
 
-A modern engineering and construction company website featuring services, project portfolio, industry expertise, careers and enterprise-grade UX.
+Современный русскоязычный сайт инженерно-строительной компании с услугами, портфолио проектов, отраслевой экспертизой, вакансиями и корпоративным UX.
 
-## Pages
+## Страницы
 
-- Home
-- Services
-- Projects
-- Project detail
-- Industries
-- About
-- Careers
-- Contact
+- Главная
+- Услуги
+- Проекты
+- Детальная страница проекта
+- Отрасли
+- О компании
+- Карьера
+- Контакты
 
-## Technologies
+## Технологии
 
 - HTML
 - CSS
 - JavaScript
-- Responsive Design
-- UI/UX Design
-- Corporate Website
-- B2B Platform
+- Адаптивный дизайн
+- UI/UX-дизайн
+- Корпоративный сайт
+- B2B-платформа
 
-Portfolio concept by Almir Khialov.
+Концепция портфолио: Almir Khialov.
