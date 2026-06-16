@@ -79,9 +79,9 @@ if ("IntersectionObserver" in window) {
 }
 
 const heroVisual = document.querySelector(".hero-visual");
-const floatingCards = heroVisual.querySelectorAll("[data-float]");
+const floatingCards = heroVisual ? heroVisual.querySelectorAll("[data-float]") : [];
 
-if (!reduceMotion && window.matchMedia("(pointer: fine)").matches) {
+if (heroVisual && floatingCards.length && !reduceMotion && window.matchMedia("(pointer: fine)").matches) {
   heroVisual.addEventListener("pointermove", (event) => {
     const bounds = heroVisual.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width - 0.5;
