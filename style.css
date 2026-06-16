@@ -1499,6 +1499,53 @@ button {
   opacity: 0.85;
 }
 
+.pereuloq-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(20, 19, 17, 0.86), rgba(20, 19, 17, 0.08) 68%);
+}
+
+.pereuloq-cover {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.case-card:hover .pereuloq-cover {
+  transform: scale(1.025);
+}
+
+.pereuloq-brand {
+  position: absolute;
+  z-index: 2;
+  left: 34px;
+  bottom: 34px;
+  display: grid;
+  color: #fff;
+}
+
+.pereuloq-brand small,
+.pereuloq-brand span {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.pereuloq-brand strong {
+  margin: 14px 0;
+  color: #ff9f0a;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(54px, 6vw, 88px);
+  line-height: 0.82;
+  letter-spacing: -0.075em;
+}
+
 .browser-mockup {
   position: absolute;
   width: 78%;
@@ -1764,7 +1811,7 @@ button {
   border-radius: 14px;
   background:
     linear-gradient(180deg, transparent, rgba(5, 6, 8, 0.92)),
-    url("mini-garage-fix/assets/images/hero-jcw.jpg") center / cover;
+    url("mini-garage-mini-app/assets/images/hero-jcw.jpg") center / cover;
 }
 
 .mini-app-hero small,
@@ -2921,6 +2968,15 @@ button {
   font-size: 32px;
 }
 
+.format-price {
+  margin: 22px 0 8px;
+  font-family: Manrope, sans-serif;
+  font-size: clamp(28px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.065em;
+}
+
 .format-card p {
   margin-bottom: auto;
 }
@@ -2937,6 +2993,15 @@ button {
 .format-card.featured small,
 .format-card.featured p {
   color: rgba(17, 17, 17, 0.66);
+}
+
+.presentation-price-note {
+  max-width: 760px;
+  margin: 26px auto 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.65;
+  text-align: center;
 }
 
 .presentation-final {

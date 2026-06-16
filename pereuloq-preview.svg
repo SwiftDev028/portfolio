@@ -1,0 +1,34 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="1000" fill="#171614"/>
+  <circle cx="1360" cy="120" r="360" fill="#FF9F0A" opacity="0.18"/>
+  <circle cx="120" cy="930" r="430" fill="#FF9F0A" opacity="0.34"/>
+  <path d="M0 650C238 563 414 575 622 650C844 730 1036 758 1600 604V1000H0V650Z" fill="#25231F"/>
+  <rect x="110" y="100" width="1380" height="800" rx="42" fill="#F4F0E8"/>
+  <rect x="110" y="100" width="1380" height="74" rx="42" fill="#E7E1D6"/>
+  <circle cx="158" cy="137" r="12" fill="#FF6B35"/>
+  <circle cx="194" cy="137" r="12" fill="#D8A15D"/>
+  <circle cx="230" cy="137" r="12" fill="#24211D"/>
+  <text x="282" y="146" fill="#514C44" font-family="Inter, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="4">PEREULOQ.RU</text>
+  <rect x="210" y="258" width="210" height="18" rx="9" fill="#201E1B"/>
+  <text x="210" y="392" fill="#201E1B" font-family="Manrope, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-8">Культура.</text>
+  <text x="210" y="512" fill="#201E1B" font-family="Manrope, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-8">Музыка.</text>
+  <text x="210" y="632" fill="#FF8A00" font-family="Manrope, Arial, sans-serif" font-size="118" font-weight="800" letter-spacing="-8">Спорт.</text>
+  <text x="214" y="704" fill="#726C61" font-family="Inter, Arial, sans-serif" font-size="28" font-weight="600">Медиа-платформа, новости и digital store</text>
+  <g transform="translate(910 248)">
+    <rect width="390" height="520" rx="34" fill="#1F1D1A"/>
+    <rect x="34" y="44" width="120" height="16" rx="8" fill="#FF9F0A"/>
+    <rect x="34" y="106" width="292" height="150" rx="22" fill="#D8A15D"/>
+    <rect x="34" y="288" width="322" height="22" rx="11" fill="#F4F0E8"/>
+    <rect x="34" y="332" width="255" height="16" rx="8" fill="#8B8377"/>
+    <rect x="34" y="386" width="142" height="86" rx="18" fill="#FF9F0A"/>
+    <rect x="200" y="386" width="122" height="86" rx="18" fill="#F4F0E8"/>
+  </g>
+  <g transform="translate(1230 376) rotate(7)">
+    <rect width="190" height="350" rx="34" fill="#11100F"/>
+    <rect x="20" y="24" width="150" height="302" rx="24" fill="#F4F0E8"/>
+    <rect x="46" y="48" width="98" height="12" rx="6" fill="#201E1B"/>
+    <rect x="42" y="98" width="106" height="86" rx="18" fill="#FF9F0A"/>
+    <rect x="42" y="208" width="106" height="16" rx="8" fill="#201E1B"/>
+    <rect x="42" y="240" width="78" height="12" rx="6" fill="#8B8377"/>
+  </g>
+</svg>
