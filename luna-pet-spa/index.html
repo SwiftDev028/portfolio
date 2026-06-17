@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#faf7f2">
+  <meta name="description" content="LUNA PET SPA — премиальный груминг и spa-уход для собак и кошек. Услуги, цены, галерея, журнал и онлайн-запись.">
+  <meta name="author" content="Almir Khialov">
+  <title>LUNA PET SPA — премиальный груминг для собак и кошек</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+  <div class="page-grain" aria-hidden="true"></div>
+  <header class="site-header" id="site-header">
+    <a class="brand" href="index.html" aria-label="LUNA PET SPA">
+      <span class="brand-mark">L</span>
+      <span><strong>LUNA PET SPA</strong><small>Премиальный уход</small></span>
+    </a>
+    <nav class="desktop-nav" aria-label="Основная навигация">
+      <a data-nav="home" href="index.html">Главная</a>
+      <a data-nav="services" href="services.html">Услуги</a>
+      <a data-nav="pricing" href="pricing.html">Цены</a>
+      <a data-nav="gallery" href="gallery.html">Галерея</a>
+      <a data-nav="journal" href="journal.html">Журнал</a>
+      <a data-nav="about" href="about.html">О салоне</a>
+      <a data-nav="contact" href="contact.html">Контакты</a>
+    </nav>
+    <a class="btn btn-primary header-cta" href="booking.html">Записаться</a>
+    <button class="menu-toggle" type="button" aria-label="Открыть меню" aria-expanded="false"><span></span><span></span></button>
+  </header>
+
+  <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="services.html">Услуги</a>
+      <a href="pricing.html">Цены</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="journal.html">Журнал</a>
+      <a href="about.html">О салоне</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <a class="btn btn-primary" href="booking.html">Записаться</a>
+  </aside>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Премиальный груминг и wellness для собак и кошек</p>
+        <h1>Ваш питомец заслуживает больше, чем просто стрижку</h1>
+        <p class="hero-text">Спокойный spa-уход, бережный груминг и эстетика премиального beauty-бренда. Мы помогаем питомцам выглядеть красиво, чувствовать себя комфортно и не бояться процедур.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="booking.html">Записаться</a>
+          <a class="btn btn-secondary" href="services.html">Смотреть услуги</a>
+        </div>
+      </div>
+      <div class="hero-photo reveal" data-parallax>
+        <div class="editorial-photo photo-poodle" aria-label="Премиальный портрет ухоженного пуделя"></div>
+        <div class="floating-note"><span>4.9</span><b>рейтинг салона</b></div>
+      </div>
+      <div class="hero-stats reveal">
+        <article><b>12</b><span>груминг-специалистов</span></article>
+        <article><b>5000+</b><span>довольных питомцев</span></article>
+        <article><b>4.9</b><span>средний рейтинг</span></article>
+        <article><b>7 лет</b><span>опыта ухода</span></article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span>Услуги</span>
+        <h2>Уход как в премиальном spa</h2>
+        <p>Каждая процедура строится вокруг комфорта питомца: мягкий темп, спокойная атмосфера и средства, подобранные под шерсть и кожу.</p>
+      </div>
+      <div class="service-preview-grid">
+        <article class="lux-card reveal">
+          <small>01</small>
+          <h3>Полный груминг</h3>
+          <p>Купание, сушка, стрижка, уход за лапами, ушами и аккуратная финальная укладка.</p>
+          <b>от 5 000 ₽ · 120 мин</b>
+        </article>
+        <article class="lux-card reveal" data-delay="80">
+          <small>02</small>
+          <h3>SPA-купание</h3>
+          <p>Глубокое очищение, мягкие маски, массаж и уход для блеска шерсти.</p>
+          <b>от 3 500 ₽ · 75 мин</b>
+        </article>
+        <article class="lux-card reveal" data-delay="160">
+          <small>03</small>
+          <h3>Груминг кошек</h3>
+          <p>Бережный уход для кошек без суеты: вычесывание, гигиена и спокойная сушка.</p>
+          <b>от 4 500 ₽ · 90 мин</b>
+        </article>
+      </div>
+    </section>
+
+    <section class="section split-section">
+      <div class="editorial-photo photo-puppy reveal"></div>
+      <div class="split-copy reveal">
+        <span class="eyebrow">Первый груминг</span>
+        <h2>Первое знакомство со стрижкой без стресса</h2>
+        <p>Щенкам важно понять, что груминг - это спокойно и безопасно. Мы не торопим процесс: знакомим с инструментами, делаем паузы, хвалим за каждый шаг и закрепляем положительный опыт.</p>
+        <div class="mini-features">
+          <span>Комфорт</span>
+          <span>Терпение</span>
+          <span>Обучение</span>
+          <span>Позитивное подкрепление</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span>Здоровый уход</span>
+        <h2>Больше, чем груминг</h2>
+        <p>Мы смотрим не только на внешний вид. Важны кожа, шерсть, уровень стресса и привычки ухода дома.</p>
+      </div>
+      <div class="wellness-grid">
+        <article class="wellness-card reveal"><i></i><h3>Кожа</h3><p>Подбираем мягкий уход при сухости, раздражении и чувствительности.</p></article>
+        <article class="wellness-card reveal"><i></i><h3>Шерсть</h3><p>Помогаем сохранить блеск, объем и здоровую структуру шерсти.</p></article>
+        <article class="wellness-card reveal"><i></i><h3>Спокойствие</h3><p>Снижаем стресс за счет пауз, тишины и внимательного общения.</p></article>
+        <article class="wellness-card reveal"><i></i><h3>Сезонный уход</h3><p>Готовим питомца к жаре, холоду, линьке и прогулкам после дождя.</p></article>
+      </div>
+    </section>
+
+    <section class="section before-after-section">
+      <div class="before-copy reveal">
+        <span class="eyebrow">До / После</span>
+        <h2>Видимая трансформация без потери естественности</h2>
+        <p>Интерактивный пример показывает, как меняется образ питомца после аккуратного ухода, вычесывания и финальной укладки.</p>
+      </div>
+      <div class="comparison reveal" data-before-after>
+        <div class="comparison-base"></div>
+        <div class="comparison-after"></div>
+        <input type="range" min="10" max="90" value="52" aria-label="Сравнение до и после">
+        <span class="comparison-label before">до</span>
+        <span class="comparison-label after">после</span>
+      </div>
+    </section>
+
+    <section class="section cta-panel reveal">
+      <div>
+        <span class="eyebrow">Запись</span>
+        <h2>Подберем уход под характер и породу питомца</h2>
+        <p>Расскажите, кто у вас, какая шерсть и что беспокоит. Специалист предложит комфортную процедуру и время визита.</p>
+      </div>
+      <a class="btn btn-primary" href="booking.html">Записаться онлайн</a>
+    </section>
+  </main>
+
+  <a class="sticky-book" href="booking.html">Записаться</a>
+  <footer class="site-footer">
+    <div>
+      <strong>LUNA PET SPA</strong>
+      <p>Премиальный концепт сайта груминг-салона для портфолио Almir Khialov.</p>
+    </div>
+    <nav>
+      <a href="services.html">Услуги</a>
+      <a href="pricing.html">Цены</a>
+      <a href="gallery.html">Галерея</a>
+      <a href="about.html">О салоне</a>
+      <a href="contact.html">Контакты</a>
+    </nav>
+    <small>Portfolio Concept by Almir Khialov</small>
+  </footer>
+</body>
+</html>

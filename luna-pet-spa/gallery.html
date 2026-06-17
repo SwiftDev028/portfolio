@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Галерея LUNA PET SPA: собаки, кошки, пудели, шпицы, ретриверы, SPA-процедуры и интерьер салона.">
+  <title>Галерея — LUNA PET SPA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body data-page="gallery">
+  <header class="site-header" id="site-header"><a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LUNA PET SPA</strong><small>Премиальный уход</small></span></a><nav class="desktop-nav"><a data-nav="home" href="index.html">Главная</a><a data-nav="services" href="services.html">Услуги</a><a data-nav="pricing" href="pricing.html">Цены</a><a data-nav="gallery" href="gallery.html">Галерея</a><a data-nav="journal" href="journal.html">Журнал</a><a data-nav="about" href="about.html">О салоне</a><a data-nav="contact" href="contact.html">Контакты</a></nav><a class="btn btn-primary header-cta" href="booking.html">Записаться</a><button class="menu-toggle" type="button" aria-label="Открыть меню"><span></span><span></span></button></header>
+  <aside class="mobile-menu" id="mobile-menu"><nav><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="pricing.html">Цены</a><a href="gallery.html">Галерея</a><a href="journal.html">Журнал</a><a href="about.html">О салоне</a><a href="contact.html">Контакты</a></nav><a class="btn btn-primary" href="booking.html">Записаться</a></aside>
+  <main>
+    <section class="page-hero">
+      <span class="eyebrow">Галерея</span>
+      <h1>Атмосфера салона и примеры ухода</h1>
+      <p>Мягкий свет, спокойные оттенки, чистые линии и аккуратные образы. Галерея показывает, как может выглядеть премиальный pet-care бренд.</p>
+    </section>
+    <section class="section">
+      <div class="filter-bar" data-filter-group>
+        <button class="active" data-filter="all">Все</button>
+        <button data-filter="dogs">Собаки</button>
+        <button data-filter="cats">Кошки</button>
+        <button data-filter="poodles">Пудели</button>
+        <button data-filter="pomeranians">Шпицы</button>
+        <button data-filter="spa">SPA</button>
+        <button data-filter="interior">Интерьер</button>
+      </div>
+      <div class="masonry-gallery">
+        <figure class="gallery-card tall dogs poodles reveal"><div class="gallery-photo photo-poodle"></div><figcaption>Пудель · породный стиль</figcaption></figure>
+        <figure class="gallery-card cats reveal"><div class="gallery-photo photo-cat"></div><figcaption>Кошка · спокойный уход</figcaption></figure>
+        <figure class="gallery-card spa reveal"><div class="gallery-photo photo-spa"></div><figcaption>SPA-процедура</figcaption></figure>
+        <figure class="gallery-card dogs pomeranians reveal"><div class="gallery-photo photo-pom"></div><figcaption>Шпиц · объемная укладка</figcaption></figure>
+        <figure class="gallery-card wide interior reveal"><div class="gallery-photo photo-interior"></div><figcaption>Интерьер салона</figcaption></figure>
+        <figure class="gallery-card dogs reveal"><div class="gallery-photo photo-golden"></div><figcaption>Golden Retriever · линька</figcaption></figure>
+        <figure class="gallery-card spa cats reveal"><div class="gallery-photo photo-care"></div><figcaption>Уход за шерстью</figcaption></figure>
+        <figure class="gallery-card dogs reveal"><div class="gallery-photo photo-family"></div><figcaption>Питомец и владелец</figcaption></figure>
+      </div>
+    </section>
+  </main>
+  <a class="sticky-book" href="booking.html">Записаться</a>
+  <footer class="site-footer"><div><strong>LUNA PET SPA</strong><p>Премиальный концепт сайта груминг-салона.</p></div><nav><a href="services.html">Услуги</a><a href="pricing.html">Цены</a><a href="gallery.html">Галерея</a><a href="about.html">О салоне</a><a href="contact.html">Контакты</a></nav><small>Portfolio Concept by Almir Khialov</small></footer>
+</body>
+</html>

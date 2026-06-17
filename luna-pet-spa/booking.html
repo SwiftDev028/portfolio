@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Онлайн-запись LUNA PET SPA: выберите питомца, породу, вес, услугу, дату и оставьте контакты.">
+  <title>Онлайн-запись — LUNA PET SPA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"><script src="script.js" defer></script>
+</head>
+<body data-page="booking">
+  <header class="site-header" id="site-header"><a class="brand" href="index.html"><span class="brand-mark">L</span><span><strong>LUNA PET SPA</strong><small>Премиальный уход</small></span></a><nav class="desktop-nav"><a data-nav="home" href="index.html">Главная</a><a data-nav="services" href="services.html">Услуги</a><a data-nav="pricing" href="pricing.html">Цены</a><a data-nav="gallery" href="gallery.html">Галерея</a><a data-nav="journal" href="journal.html">Журнал</a><a data-nav="about" href="about.html">О салоне</a><a data-nav="contact" href="contact.html">Контакты</a></nav><a class="btn btn-primary header-cta" href="booking.html">Записаться</a><button class="menu-toggle" type="button" aria-label="Открыть меню"><span></span><span></span></button></header>
+  <aside class="mobile-menu" id="mobile-menu"><nav><a href="index.html">Главная</a><a href="services.html">Услуги</a><a href="pricing.html">Цены</a><a href="gallery.html">Галерея</a><a href="journal.html">Журнал</a><a href="about.html">О салоне</a><a href="contact.html">Контакты</a></nav><a class="btn btn-primary" href="booking.html">Записаться</a></aside>
+  <main>
+    <section class="booking-layout">
+      <div class="booking-intro reveal">
+        <span class="eyebrow">Онлайн-запись</span>
+        <h1>Подберем процедуру под вашего питомца</h1>
+        <p>Заполните короткую форму. После отправки специалист свяжется с вами и уточнит детали.</p>
+        <div class="editorial-photo photo-care"></div>
+      </div>
+      <form class="booking-card reveal" data-booking-form>
+        <div class="booking-progress"><i class="active"></i><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="booking-step active" data-step="0"><h2>Кто ваш питомец?</h2><div class="choice-grid"><label><input name="type" type="radio" value="Собака" checked>Собака</label><label><input name="type" type="radio" value="Кошка">Кошка</label></div></div>
+        <div class="booking-step" data-step="1"><h2>Порода</h2><input name="breed" type="text" placeholder="Например, пудель или шпиц"></div>
+        <div class="booking-step" data-step="2"><h2>Вес</h2><select name="weight"><option>до 5 кг</option><option>5-12 кг</option><option>12-25 кг</option><option>25+ кг</option></select></div>
+        <div class="booking-step" data-step="3"><h2>Услуга</h2><select name="service"><option>Полный груминг</option><option>SPA-купание</option><option>Груминг щенка</option><option>Груминг кошки</option><option>Премиальный уход</option></select></div>
+        <div class="booking-step" data-step="4"><h2>Дата</h2><input name="date" type="date"></div>
+        <div class="booking-step" data-step="5"><h2>Контакты</h2><input required name="owner" type="text" placeholder="Имя владельца"><input required name="phone" type="tel" placeholder="Телефон"><input name="email" type="email" placeholder="Email"><input name="pet" type="text" placeholder="Имя питомца"><input name="age" type="text" placeholder="Возраст питомца"><textarea name="notes" placeholder="Особые пожелания"></textarea></div>
+        <div class="booking-actions"><button class="btn btn-secondary" type="button" data-prev>Назад</button><button class="btn btn-primary" type="button" data-next>Далее</button><button class="btn btn-primary" type="submit" data-submit>Отправить</button></div>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer"><div><strong>LUNA PET SPA</strong><p>Премиальный концепт сайта груминг-салона.</p></div><nav><a href="services.html">Услуги</a><a href="pricing.html">Цены</a><a href="gallery.html">Галерея</a><a href="about.html">О салоне</a><a href="contact.html">Контакты</a></nav><small>Portfolio Concept by Almir Khialov</small></footer>
+</body>
+</html>
