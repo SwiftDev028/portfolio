@@ -412,9 +412,9 @@ main {
 }
 
 .hero-photo .editorial-photo > img {
-  object-fit: contain;
-  object-position: center bottom;
-  padding: clamp(10px, 1.4vw, 20px);
+  object-fit: cover;
+  object-position: center 50%;
+  padding: 0;
 }
 
 .hero-photo .editorial-photo:hover > img {
@@ -492,6 +492,11 @@ main {
 
 .photo-interior {
   --image-position: left center;
+}
+
+.photo-philosophy {
+  min-height: 470px;
+  --image-position: center;
 }
 
 .photo-puppy,
@@ -780,6 +785,10 @@ main {
 .service-card-dark li,
 .price-card.featured p {
   color: rgba(255, 255, 255, 0.72);
+}
+
+.service-card-dark b {
+  color: #fff;
 }
 
 .split-section {
