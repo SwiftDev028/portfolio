@@ -826,27 +826,31 @@ main {
   background: var(--beige);
 }
 
-.comparison-base,
+.comparison-before,
 .comparison-after {
   position: absolute;
   inset: 0;
 }
 
-.comparison-base {
-  background:
-    radial-gradient(circle at 46% 38%, #5f5549 0 3%, transparent 3.2%),
-    radial-gradient(circle at 57% 38%, #5f5549 0 3%, transparent 3.2%),
-    radial-gradient(ellipse at 51% 62%, rgba(95, 85, 73, 0.28), transparent 22%),
-    linear-gradient(135deg, #d5c0a3, #99846b);
+.comparison img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .comparison-after {
+  display: block;
+}
+
+.comparison-before {
   width: 52%;
-  background:
-    radial-gradient(circle at 46% 38%, #2b2926 0 2.5%, transparent 2.8%),
-    radial-gradient(circle at 57% 38%, #2b2926 0 2.5%, transparent 2.8%),
-    radial-gradient(ellipse at 51% 62%, rgba(198, 164, 106, 0.36), transparent 22%),
-    linear-gradient(135deg, #fff8ee, #cda869);
+  overflow: hidden;
+}
+
+.comparison-before img {
+  max-width: none;
+  width: var(--comparison-width, 100%);
 }
 
 .comparison::after {

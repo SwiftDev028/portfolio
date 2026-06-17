@@ -10,8 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="styles.css?v=before-after-photos">
+  <script src="script.js?v=before-after-photos" defer></script>
 </head>
 <body data-page="home">
   <div class="page-grain" aria-hidden="true"></div>
@@ -137,8 +137,10 @@
         <p>Интерактивный пример показывает, как меняется образ питомца после аккуратного ухода, вычесывания и финальной укладки.</p>
       </div>
       <div class="comparison reveal" data-before-after>
-        <div class="comparison-base"></div>
-        <div class="comparison-after"></div>
+        <img class="comparison-after" src="assets/images/luna-groom-after.jpg" alt="Пудель после профессионального груминга">
+        <div class="comparison-before">
+          <img src="assets/images/luna-groom-before.jpg" alt="Пудель до профессионального груминга">
+        </div>
         <input type="range" min="10" max="90" value="52" aria-label="Сравнение до и после">
         <span class="comparison-label before">до</span>
         <span class="comparison-label after">после</span>

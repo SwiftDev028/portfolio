@@ -60,13 +60,15 @@ if (parallax && !reduceMotion) {
 
 document.querySelectorAll("[data-before-after]").forEach((comparison) => {
   const range = comparison.querySelector("input");
-  const after = comparison.querySelector(".comparison-after");
+  const before = comparison.querySelector(".comparison-before");
   function update() {
     const value = `${range.value}%`;
-    after.style.width = value;
+    before.style.width = value;
+    before.style.setProperty("--comparison-width", `${comparison.clientWidth}px`);
     comparison.style.setProperty("--pos", value);
   }
   range.addEventListener("input", update);
+  window.addEventListener("resize", update);
   update();
 });
 
