@@ -388,14 +388,37 @@ main {
   box-shadow: inset 0 -38px 80px rgba(61, 44, 22, 0.18);
 }
 
+.editorial-photo > img,
+.gallery-photo > img {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: transform 0.7s ease;
+}
+
+.editorial-photo:hover > img,
+.gallery-photo:hover > img {
+  transform: scale(1.03);
+}
+
+.editorial-photo:has(> img)::before,
+.gallery-photo:has(> img)::before {
+  display: none;
+}
+
 .editorial-photo::after,
 .gallery-photo::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 2;
   background:
-    linear-gradient(160deg, rgba(255, 255, 255, 0.45), transparent 36%),
-    linear-gradient(0deg, rgba(28, 28, 28, 0.12), transparent 48%);
+    linear-gradient(160deg, rgba(255, 255, 255, 0.2), transparent 36%),
+    linear-gradient(0deg, rgba(28, 28, 28, 0.08), transparent 48%);
   pointer-events: none;
 }
 
