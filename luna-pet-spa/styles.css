@@ -477,6 +477,14 @@ main {
   --image-position: 74% center;
 }
 
+.photo-yorkie,
+.photo-pomeranian,
+.photo-golden,
+.photo-british,
+.photo-shih-tzu {
+  --image-position: center;
+}
+
 .photo-spa,
 .photo-studio {
   --image-position: center;
@@ -973,8 +981,9 @@ main {
   display: none;
 }
 
-.gallery-photo {
+.gallery-card .gallery-photo {
   height: 320px;
+  min-height: 0;
   border: 0;
   border-radius: 0;
   box-shadow: none;
