@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aroma Cafe - авторский кофе и десерты в Санкт-Петербурге</title>
+  <meta name="description" content="Современное кафе с авторским кофе, завтраками, свежей выпечкой и уютной атмосферой. Онлайн-бронирование столика и меню.">
+  <meta property="og:title" content="Aroma Cafe - кофе как настроение">
+  <meta property="og:description" content="Авторский кофе, завтраки весь день и десерты ручной работы.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta name="theme-color" content="#f8f1e8">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%233a2418'/><text x='32' y='43' font-size='34' text-anchor='middle' fill='%23f8f1e8'>A</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1">
+  <script src="script.js?v=1" defer></script>
+</head>
+<body>
+  <header class="header" id="top">
+    <a class="logo" href="#top"><span>A</span>Aroma Cafe</a>
+    <nav class="nav" aria-label="Основная навигация"><a href="#about">О кафе</a><a href="#menu">Меню</a><a href="#gallery">Атмосфера</a><a href="#booking">Бронирование</a><a href="#contacts">Контакты</a></nav>
+    <a class="header-button" href="#booking">Забронировать</a>
+    <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false"><i></i><i></i></button>
+  </header>
+  <aside class="mobile-nav"><a href="#about">О кафе</a><a href="#menu">Меню</a><a href="#gallery">Атмосфера</a><a href="#booking">Бронирование</a><a href="#contacts">Контакты</a></aside>
+
+  <main>
+    <section class="hero section">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Городское кафе в центре Петербурга</p>
+        <h1>Aroma Cafe - место, где кофе становится <em>настроением</em></h1>
+        <p class="lead">Авторский кофе, свежая выпечка и спокойная атмосфера. Заходите на завтрак, встречу или вечерний десерт.</p>
+        <div class="actions"><a class="btn primary" href="#menu">Посмотреть меню</a><a class="btn secondary" href="#booking">Забронировать столик</a></div>
+        <div class="badges"><span>Свежеобжаренный кофе</span><span>Завтраки весь день</span><span>Десерты ручной работы</span></div>
+      </div>
+      <div class="hero-visual reveal" data-parallax>
+        <img src="assets/images/hero.jpg" alt="Капучино и круассан в интерьере Aroma Cafe">
+        <div class="float-card rating"><b>4.9</b><span>рейтинг гостей</span></div>
+        <div class="float-card open"><i></i><span>Открыто сегодня<br><b>до 22:00</b></span></div>
+      </div>
+    </section>
+
+    <section class="story section" id="about">
+      <div class="section-head reveal"><p class="eyebrow">О кафе</p><h2>Не просто кофе.<br>Маленький ритуал каждый день.</h2></div>
+      <div class="story-grid">
+        <p class="story-text reveal">Aroma Cafe - городское кафе с теплой атмосферой, авторскими напитками и десертами собственного приготовления. Здесь приятно начать утро, провести встречу или спокойно отдохнуть вечером.</p>
+        <div class="story-points reveal"><span>01 <b>Спокойная атмосфера</b></span><span>02 <b>Натуральные ингредиенты</b></span><span>03 <b>Авторская кофейная карта</b></span></div>
+      </div>
+      <div class="stats reveal"><article><b>12</b><span>видов кофе</span></article><article><b>18</b><span>десертов</span></article><article><b>7:30</b><span>открываемся ежедневно</span></article><article><b>4.9</b><span>рейтинг гостей</span></article></div>
+    </section>
+
+    <section class="benefits section dark">
+      <div class="section-head reveal"><p class="eyebrow">Почему мы</p><h2>Детали, из которых складывается любимое место</h2></div>
+      <div class="benefit-grid"><article class="reveal"><span>01</span><h3>Авторский кофе</h3><p>Свежая арабика, сезонные вкусы и мягкая подача.</p></article><article class="reveal"><span>02</span><h3>Свежая выпечка</h3><p>Круассаны, тарты и десерты готовим каждый день.</p></article><article class="reveal"><span>03</span><h3>Уютный интерьер</h3><p>Теплый свет и комфортные места для встреч и работы.</p></article><article class="reveal"><span>04</span><h3>Быстрая подача</h3><p>Кофе с собой или неспешный завтрак в зале.</p></article></div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-head reveal"><p class="eyebrow">Меню</p><h2>Выберите свое настроение</h2><p>Знакомые вкусы в аккуратной авторской подаче.</p></div>
+      <div class="filters reveal" role="group" aria-label="Категории меню"><button class="active" data-filter="all">Все</button><button data-filter="coffee">Кофе</button><button data-filter="breakfast">Завтраки</button><button data-filter="dessert">Десерты</button><button data-filter="cold">Холодные напитки</button></div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section class="gallery section" id="gallery">
+      <div class="section-head reveal"><p class="eyebrow">Атмосфера</p><h2>Место, в котором хочется остаться</h2></div>
+      <div class="gallery-grid">
+        <figure class="g-wide reveal"><img src="assets/images/hero.jpg" alt="Интерьер кафе"><figcaption>Теплый свет и спокойствие</figcaption></figure>
+        <figure class="reveal crop-left"><img src="assets/images/coffee.jpg" alt="Чашка кофе"><figcaption>Утро с ароматом кофе</figcaption></figure>
+        <figure class="reveal crop-right"><img src="assets/images/desserts.jpg" alt="Десерты"><figcaption>Десерты ручной работы</figcaption></figure>
+        <figure class="reveal crop-center"><img src="assets/images/breakfast.jpg" alt="Завтрак"><figcaption>Завтраки весь день</figcaption></figure>
+        <figure class="g-tall reveal"><img src="assets/images/cold.jpg" alt="Холодные напитки"><figcaption>Кофе с собой</figcaption></figure>
+        <figure class="reveal"><img src="assets/images/signature.jpg" alt="Барная стойка"><figcaption>Место для встреч</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="signature section">
+      <div class="section-head reveal"><p class="eyebrow">Коллекция Aroma</p><h2>Авторские напитки, которые хочется попробовать снова</h2></div>
+      <div class="signature-grid"><article class="drink d1 reveal"><div></div><span>01</span><h3>Salted Caramel Latte</h3><p>Карамель, морская соль и мягкий сливочный вкус.</p></article><article class="drink d2 reveal"><div></div><span>02</span><h3>Orange Raf</h3><p>Апельсиновая цедра и тонкая ванильная нота.</p></article><article class="drink d3 reveal"><div></div><span>03</span><h3>Coconut Cold Brew</h3><p>Холодный кофе, кокосовое молоко и легкая сладость.</p></article></div>
+    </section>
+
+    <section class="booking section" id="booking">
+      <div class="booking-copy reveal"><p class="eyebrow">Ваш столик</p><h2>Оставьте время для хорошего кофе</h2><p>Заполните короткую форму. Мы свяжемся с вами для подтверждения.</p><a href="https://t.me/almirkhialov" target="_blank" rel="noopener">Кофе с собой? Напишите в Telegram</a></div>
+      <form class="booking-form reveal" id="booking-form"><label>Имя<input name="name" required placeholder="Как к вам обращаться"></label><label>Телефон<input name="phone" required type="tel" placeholder="+7 999 000-00-00"></label><label>Дата<input name="date" required type="date"></label><label>Время<input name="time" required type="time"></label><label>Гостей<select name="guests"><option>1 гость</option><option>2 гостя</option><option>3 гостя</option><option>4 гостя</option><option>5+ гостей</option></select></label><label class="full">Комментарий<textarea name="comment" placeholder="Например, столик у окна"></textarea></label><button class="btn primary full" type="submit">Забронировать столик</button></form>
+    </section>
+
+    <section class="reviews section">
+      <div class="review-score reveal"><b>4.9</b><span>из 5</span><p>320+ отзывов гостей</p></div>
+      <div class="review-list"><article class="reveal"><span>★★★★★</span><p>«Очень уютное место. Вкусный кофе, красивые десерты и приятная музыка.»</p><b>Анна</b></article><article class="reveal"><span>★★★★★</span><p>«Флэт уайт и круассан с лососем - все свежее и очень вкусное.»</p><b>Михаил</b></article><article class="reveal"><span>★★★★★</span><p>«Люблю приходить сюда работать. Спокойно, красиво и всегда вкусно.»</p><b>Екатерина</b></article><article class="reveal"><span>★★★★★</span><p>«Один из лучших рафов. Особенно понравился Orange Raf.»</p><b>Даниил</b></article></div>
+    </section>
+
+    <section class="contacts section" id="contacts"><div class="contact-copy reveal"><p class="eyebrow">Санкт-Петербург</p><h2>Загляните к нам сегодня</h2><dl><div><dt>Адрес</dt><dd>ул. Итальянская, 12</dd></div><div><dt>Часы</dt><dd>Ежедневно, 7:30-22:00</dd></div><div><dt>Телефон</dt><dd>+7 999 123-45-67</dd></div><div><dt>Telegram</dt><dd>@aromacafe</dd></div></dl></div><div class="map reveal"><div class="map-pin"><span>A</span><b>Aroma Cafe</b><small>Итальянская, 12</small></div><i class="road r1"></i><i class="road r2"></i><i class="road r3"></i></div></section>
+
+    <section class="project section"><p class="eyebrow">О проекте</p><h2>Коммерческий digital-концепт для современного кафе</h2><p>В проекте показаны премиальный визуальный стиль, адаптивная верстка, интерактивное меню, форма бронирования, мини-корзина и плавные анимации.</p><div><span>Дизайн сайта</span><span>Адаптивная верстка</span><span>Интерактивное меню</span><span>Форма бронирования</span><span>Мини-корзина</span><span>SEO-структура</span></div></section>
+  </main>
+
+  <footer><a class="logo" href="#top"><span>A</span>Aroma Cafe</a><p>Авторский кофе, завтраки и десерты каждый день.</p><nav><a href="#menu">Меню</a><a href="#about">О кафе</a><a href="#booking">Бронирование</a><a href="#contacts">Контакты</a></nav><small>Концепт и разработка: <a href="https://almirkhialov.ru">Almir Khialov</a></small></footer>
+  <button class="cart-fab" id="cart-fab" aria-label="Открыть заказ"><span>0</span><b>Заказ</b></button>
+  <div class="modal" id="cart-modal" aria-hidden="true"><div class="modal-card"><button class="modal-close" aria-label="Закрыть">×</button><p class="eyebrow">Ваш заказ</p><h2>Почти готово</h2><div id="cart-items"></div><div class="cart-total"><span>Итого</span><b id="cart-total">0 ₽</b></div><a class="btn primary" id="order-link" href="https://t.me/almirkhialov" target="_blank" rel="noopener">Оформить в Telegram</a></div></div>
+  <div class="toast" role="status"></div>
+</body>
+</html>

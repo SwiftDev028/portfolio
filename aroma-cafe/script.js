@@ -1,0 +1,26 @@
+const products=[
+  ['Капучино с карамелью','Мягкий эспрессо, молочная пена и карамельный акцент.',290,'coffee','Кофе',0],['Флэт Уайт','Двойной эспрессо и шелковистое молоко.',320,'coffee','Кофе',1],['Латте Ваниль','Нежный латте с натуральной ванилью.',310,'coffee','Кофе',2],
+  ['Авокадо-тост','Хрустящий хлеб, авокадо, яйцо пашот и микрозелень.',490,'breakfast','Завтраки',0],['Сырники с ягодами','Нежные сырники, сметана и ягодный соус.',420,'breakfast','Завтраки',1],['Круассан с лососем','Сливочный сыр, лосось и свежая зелень.',560,'breakfast','Завтраки',2],
+  ['Чизкейк Нью-Йорк','Классический чизкейк с ягодным соусом.',390,'dessert','Десерты',0],['Медовик','Домашний медовик с легким кремом.',360,'dessert','Десерты',1],['Шоколадный тарт','Насыщенный шоколад, песочная основа и морская соль.',410,'dessert','Десерты',2],
+  ['Айс Латте','Холодный латте с мягким кофейным вкусом.',330,'cold','Холодные напитки',0],['Матча Тоник','Матча, тоник, лед и цитрусовая свежесть.',390,'cold','Холодные напитки',1],['Лимонад Малина-Базилик','Домашний лимонад с ягодами и базиликом.',350,'cold','Холодные напитки',2]
+];
+const imageByCategory={coffee:'coffee.jpg',breakfast:'breakfast.jpg',dessert:'desserts.jpg',cold:'cold.jpg'};
+const grid=document.querySelector('#menu-grid');
+grid.innerHTML=products.map((p,i)=>`<article class="menu-card reveal" data-category="${p[3]}"><div class="menu-image pos-${p[5]}" style="background-image:url('assets/images/${imageByCategory[p[3]]}')" role="img" aria-label="${p[0]}"></div><div class="menu-body"><small>${p[4]}</small><h3>${p[0]}</h3><p>${p[1]}</p><div class="menu-bottom"><b>${p[2]} ₽</b><button class="add-button" data-add="${i}" aria-label="Добавить ${p[0]} в заказ">+</button></div></div></article>`).join('');
+
+const toast=document.querySelector('.toast');let toastTimer;
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
+document.querySelectorAll('.filters button').forEach(button=>button.addEventListener('click',()=>{document.querySelector('.filters .active').classList.remove('active');button.classList.add('active');document.querySelectorAll('.menu-card').forEach(card=>card.classList.toggle('hidden',button.dataset.filter!=='all'&&card.dataset.category!==button.dataset.filter))}));
+
+let cart=JSON.parse(localStorage.getItem('aroma-cart')||'[]');
+const count=document.querySelector('#cart-fab span'),items=document.querySelector('#cart-items'),total=document.querySelector('#cart-total'),modal=document.querySelector('#cart-modal'),orderLink=document.querySelector('#order-link');
+function renderCart(){count.textContent=cart.length;items.innerHTML=cart.length?cart.map(i=>`<div class="cart-line"><span>${products[i][0]}</span><b>${products[i][2]} ₽</b></div>`).join(''):'<p>Заказ пока пуст. Выберите что-нибудь вкусное.</p>';const sum=cart.reduce((s,i)=>s+products[i][2],0);total.textContent=`${sum} ₽`;const text=cart.length?`Здравствуйте! Хочу заказать: ${cart.map(i=>products[i][0]).join(', ')}. Итого ${sum} ₽.`:'Здравствуйте! Хочу сделать заказ в Aroma Cafe.';orderLink.href=`https://t.me/almirkhialov?text=${encodeURIComponent(text)}`;localStorage.setItem('aroma-cart',JSON.stringify(cart))}
+document.addEventListener('click',event=>{const button=event.target.closest('[data-add]');if(!button)return;cart.push(Number(button.dataset.add));renderCart();showToast('Добавлено в заказ')});
+function toggleModal(open){modal.classList.toggle('open',open);modal.setAttribute('aria-hidden',String(!open));document.body.classList.toggle('modal-open',open)}
+document.querySelector('#cart-fab').addEventListener('click',()=>toggleModal(true));document.querySelector('.modal-close').addEventListener('click',()=>toggleModal(false));modal.addEventListener('click',e=>{if(e.target===modal)toggleModal(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')toggleModal(false)});renderCart();
+
+const form=document.querySelector('#booking-form');form.addEventListener('submit',event=>{event.preventDefault();const phone=new FormData(form).get('phone').replace(/\D/g,'');if(phone.length<10){showToast('Проверьте номер телефона');return}showToast('Спасибо! Мы свяжемся для подтверждения бронирования.');form.reset()});
+const header=document.querySelector('.header');addEventListener('scroll',()=>header.classList.toggle('scrolled',scrollY>20),{passive:true});
+const toggle=document.querySelector('.menu-toggle'),mobile=document.querySelector('.mobile-nav');toggle.addEventListener('click',()=>{const open=mobile.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open))});mobile.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{mobile.classList.remove('open');toggle.setAttribute('aria-expanded','false')}));
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const heroVisual=document.querySelector('[data-parallax]');if(heroVisual&&!matchMedia('(prefers-reduced-motion: reduce)').matches)addEventListener('scroll',()=>{heroVisual.style.transform=`translateY(${Math.min(scrollY*.045,28)}px)`},{passive:true});
