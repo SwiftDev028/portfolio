@@ -4,9 +4,9 @@ const products=[
   ['Чизкейк Нью-Йорк','Классический чизкейк с ягодным соусом.',390,'dessert','Десерты',0],['Медовик','Домашний медовик с легким кремом.',360,'dessert','Десерты',1],['Шоколадный тарт','Насыщенный шоколад, песочная основа и морская соль.',410,'dessert','Десерты',2],
   ['Айс Латте','Холодный латте с мягким кофейным вкусом.',330,'cold','Холодные напитки',0],['Матча Тоник','Матча, тоник, лед и цитрусовая свежесть.',390,'cold','Холодные напитки',1],['Лимонад Малина-Базилик','Домашний лимонад с ягодами и базиликом.',350,'cold','Холодные напитки',2]
 ];
-const imageByCategory={coffee:'coffee.jpg',breakfast:'breakfast.jpg',dessert:'desserts.jpg',cold:'cold.jpg'};
+const itemImages=['cappuccino.jpg','flat-white.jpg','vanilla-latte.jpg','avocado-toast.jpg','syrniki.jpg','salmon-croissant.jpg','cheesecake.jpg','medovik.jpg','chocolate-tart.jpg','iced-latte.jpg','matcha-tonic.jpg','raspberry-lemonade.jpg'];
 const grid=document.querySelector('#menu-grid');
-grid.innerHTML=products.map((p,i)=>`<article class="menu-card reveal" data-category="${p[3]}"><div class="menu-image pos-${p[5]}" style="background-image:url('assets/images/${imageByCategory[p[3]]}')" role="img" aria-label="${p[0]}"></div><div class="menu-body"><small>${p[4]}</small><h3>${p[0]}</h3><p>${p[1]}</p><div class="menu-bottom"><b>${p[2]} ₽</b><button class="add-button" data-add="${i}" aria-label="Добавить ${p[0]} в заказ">+</button></div></div></article>`).join('');
+grid.innerHTML=products.map((p,i)=>`<article class="menu-card reveal" data-category="${p[3]}"><div class="menu-image" style="background-image:url('assets/images/menu/${itemImages[i]}')" role="img" aria-label="${p[0]}"></div><div class="menu-body"><small>${p[4]}</small><h3>${p[0]}</h3><p>${p[1]}</p><div class="menu-bottom"><b>${p[2]} ₽</b><button class="add-button" data-add="${i}" aria-label="Добавить ${p[0]} в заказ">+</button></div></div></article>`).join('');
 
 const toast=document.querySelector('.toast');let toastTimer;
 function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2400)}
