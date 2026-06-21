@@ -3680,3 +3680,10 @@ button {
     transform: none;
   }
 }
+.prisma-studio-visual::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.78),rgba(0,0,0,.05)),linear-gradient(0deg,rgba(0,0,0,.52),transparent 55%)}
+.prisma-studio-visual img{filter:saturate(.75) contrast(1.08)}
+.prisma-studio-brand{position:absolute;z-index:2;left:clamp(24px,5vw,72px);bottom:clamp(24px,5vw,58px);display:grid;color:#e1e0cc}
+.prisma-studio-brand small{font-size:10px;font-weight:700;letter-spacing:.18em;text-transform:uppercase}
+.prisma-studio-brand strong{margin:10px 0;font-size:clamp(52px,9vw,120px);line-height:.75;letter-spacing:-.08em}
+.prisma-studio-brand em{font-family:Georgia,serif;font-weight:400}
+.prisma-studio-brand span{font-size:12px;color:rgba(225,224,204,.68)}
