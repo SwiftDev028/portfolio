@@ -1,0 +1,2 @@
+import {CONTACTS} from '../data';
+export function Footer(){return <footer className="footer"><a className="wordmark" href="#top">Александр <i>Ветров</i></a><p>© 2026 Александр Ветров.<br/>Свадьбы, корпоративы и частные мероприятия.</p><nav><a href={CONTACTS.telegram} target="_blank" rel="noreferrer">Telegram ↗</a><a href={CONTACTS.whatsapp} target="_blank" rel="noreferrer">WhatsApp ↗</a><a href={CONTACTS.instagram} target="_blank" rel="noreferrer">Instagram ↗</a></nav></footer>}

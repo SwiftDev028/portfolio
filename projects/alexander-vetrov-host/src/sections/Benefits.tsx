@@ -1,0 +1,2 @@
+import {Check} from 'lucide-react';import {benefits} from '../data';import {Reveal} from '../components/Reveal';
+export function Benefits(){return <section className="benefits section"><span className="section-tag">04 / За что меня выбирают</span><Reveal><h2>Точно по тону.<br/>Легко <em>по ощущению.</em></h2></Reveal><div className="benefit-grid">{benefits.map((item,i)=><Reveal key={item} delay={i*.05} className="benefit"><Check/><span>0{i+1}</span><h3>{item}</h3></Reveal>)}</div></section>}

@@ -1,0 +1,1 @@
+export function Atmosphere(){const words=['Лёгкость','Стиль','Юмор','Эмоции','Ритм','Доверие'];return <section className="atmosphere" aria-label="Атмосфера событий"><div className="marquee">{[...words,...words].map((word,i)=><span key={`${word}-${i}`}>{word}<i>✦</i></span>)}</div></section>}

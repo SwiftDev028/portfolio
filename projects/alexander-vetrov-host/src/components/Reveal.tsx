@@ -1,0 +1,2 @@
+import {motion,useInView,useReducedMotion} from 'framer-motion';import {ReactNode,useRef} from 'react';
+export function Reveal({children,className='',delay=0}: {children:ReactNode;className?:string;delay?:number}){const ref=useRef<HTMLDivElement>(null),visible=useInView(ref,{once:true,margin:'-8%'}),reduced=useReducedMotion();return <motion.div ref={ref} className={className} initial={{opacity:reduced?1:0,y:reduced?0:34}} animate={visible?{opacity:1,y:0}:undefined} transition={{duration:.85,delay,ease:[.22,1,.36,1]}}>{children}</motion.div>}
